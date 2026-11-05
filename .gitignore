@@ -1,0 +1,12 @@
+# Dataset: too large for git (3.3 GB). Everyone keeps their own local copy.
+DPD_Small/
+*.7z
+
+# Model checkpoints and feature banks (hundreds of MB each)
+*.pt
+*.pth
+*.npz
+
+# Python / Jupyter clutter
+__pycache__/
+.ipynb_checkpoints/
