@@ -1,0 +1,70 @@
+{
+  "model": "Baseline 1: independent ViT-B/16 (crop + disease)",
+  "epochs": 10,
+  "dev_bias": 6.778604030609131,
+  "results": {
+    "b = 0 (no calibration)": {
+      "bias": 0.0,
+      "seen top-1": 0.6754999756813049,
+      "seen top-5": 0.8784999847412109,
+      "unseen top-1": 0.10151933878660202,
+      "unseen top-5": 0.3770718276500702,
+      "harmonic mean": 0.17651121305393036
+    },
+    "b from dev validation (REPORTED)": {
+      "bias": 6.779,
+      "seen top-1": 0.597000002861023,
+      "seen top-5": 0.843999981880188,
+      "unseen top-1": 0.6581491827964783,
+      "unseen top-5": 0.9274861812591553,
+      "harmonic mean": 0.6260850399335623
+    },
+    "oracle b on test (upper bound)": {
+      "bias": 7.913,
+      "seen top-1": 0.559499979019165,
+      "seen top-5": 0.828499972820282,
+      "unseen top-1": 0.7451657652854919,
+      "unseen top-5": 0.9399171471595764,
+      "harmonic mean": 0.6391219082175523
+    }
+  },
+  "auc": 0.5114399140497277,
+  "heads": {
+    "test-seen": {
+      "crop acc": 0.9004999995231628,
+      "disease acc": 0.6890000104904175,
+      "crop+disease acc": 0.659500002861023
+    },
+    "test-unseen": {
+      "crop acc": 0.7092541456222534,
+      "disease acc": 0.11602210253477097,
+      "crop+disease acc": 0.07251381129026413
+    }
+  },
+  "paper_protocol_hm": 0.1306610826978443,
+  "shortcut_rate": 0.59296875,
+  "cfg": {
+    "drive_root": "C:\\Users\\basil\\Documents\\001_Year4_Sem7(Extended)\\COS30082 APPLIED MACHINE LEARNING\\Group_ML Assignment\\COS30082-ML-Project",
+    "archive_name": "DPD_Small.7z",
+    "dataset_dir": "C:\\Users\\basil\\Documents\\001_Year4_Sem7(Extended)\\COS30082 APPLIED MACHINE LEARNING\\Group_ML Assignment\\COS30082-ML-Project\\DPD_Small",
+    "data_root": "C:\\Users\\basil\\Documents\\001_Year4_Sem7(Extended)\\COS30082 APPLIED MACHINE LEARNING\\Group_ML Assignment\\COS30082-ML-Project\\.runtime\\data",
+    "local_root": "C:\\Users\\basil\\Documents\\001_Year4_Sem7(Extended)\\COS30082 APPLIED MACHINE LEARNING\\Group_ML Assignment\\COS30082-ML-Project\\.runtime",
+    "cache_size": 320,
+    "backbone": "vit_b_16",
+    "weights": "ViT_B_16_Weights.DEFAULT",
+    "img_size": 224,
+    "batch_size": 4,
+    "accumulation_steps": 8,
+    "eval_batch_size": 16,
+    "epochs": 20,
+    "lr": 3e-05,
+    "weight_decay": 0.05,
+    "num_holdout_pairs": 15,
+    "val_frac": 0.1,
+    "num_workers": 0,
+    "seed": 42,
+    "low_memory": true
+  },
+  "protocol": "independent-vit-b16-pseudo-unseen-v2-auto",
+  "data_fingerprint": "ef9de7a92352f771b541a68c703ad7d32eec5434e458a5cb94003080a9667fe9"
+}
