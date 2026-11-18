@@ -7,6 +7,9 @@ DPD_Small/
 *.pth
 *.npz
 
+# Local B2 ViT transfer bundle: checkpoint, cache, dataset copy, outputs
+/DeepLearning/Model 2/B2_ViT(main DL)/
+
 # Python / Jupyter clutter
 __pycache__/
 .ipynb_checkpoints/
