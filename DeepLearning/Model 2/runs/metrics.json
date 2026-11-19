@@ -1,0 +1,77 @@
+{
+  "variant": "model2_factorized_supcon",
+  "stage1_epochs": 10,
+  "stage2_epochs": 9,
+  "dev_bias": 5.420510292053223,
+  "results": {
+    "b = 0 (no calibration)": {
+      "bias": 0.0,
+      "seen top-1": 0.6744999885559082,
+      "seen top-5": 0.8700000047683716,
+      "unseen top-1": 0.03383978083729744,
+      "unseen top-5": 0.2686464190483093,
+      "harmonic mean": 0.06444628065157032
+    },
+    "b from dev validation (REPORTED)": {
+      "bias": 5.421,
+      "seen top-1": 0.6274999976158142,
+      "seen top-5": 0.843999981880188,
+      "unseen top-1": 0.46201658248901367,
+      "unseen top-5": 0.9019337296485901,
+      "harmonic mean": 0.5321908995316592
+    },
+    "oracle b on test (upper bound)": {
+      "bias": 6.23,
+      "seen top-1": 0.578499972820282,
+      "seen top-5": 0.8289999961853027,
+      "unseen top-1": 0.5718231797218323,
+      "unseen top-5": 0.9309391975402832,
+      "harmonic mean": 0.5751421992959954
+    }
+  },
+  "auc": 0.44794803410865325,
+  "heads": {
+    "test-seen": {
+      "crop acc": 0.909500002861023,
+      "disease acc": 0.6859999895095825,
+      "crop+disease acc": 0.6635000109672546
+    },
+    "test-unseen": {
+      "crop acc": 0.6947513818740845,
+      "disease acc": 0.0808011069893837,
+      "crop+disease acc": 0.02002762444317341
+    }
+  },
+  "paper_protocol_hm": 0.038881614580848836,
+  "shortcut_rate": 0.594290007513148,
+  "data_fingerprint": "ef9de7a92352f771b541a68c703ad7d32eec5434e458a5cb94003080a9667fe9",
+  "cfg": {
+    "run_mode": "final",
+    "auto_final": true,
+    "smoke": false,
+    "b2_init_ckpt": "c:\\Users\\basil\\Documents\\001_Year4_Sem7(Extended)\\COS30082 APPLIED MACHINE LEARNING\\Group_ML Assignment\\COS30082-ML-Project\\DeepLearning\\Model 2\\B2_ViT(main DL)\\outputs-20261118T093258Z-1-001\\outputs\\baseline2_multitask_vit\\final\\best.pt",
+    "backbone": "vit_base_patch16_224",
+    "pretrained": false,
+    "img_size": 224,
+    "stage1_epochs": 10,
+    "stage2_epochs": 10,
+    "stage1_batch_size": 8,
+    "stage2_batch_size": 16,
+    "eval_batch_size": 16,
+    "num_workers": 0,
+    "lr_backbone": 3e-05,
+    "lr_projection": 0.0003,
+    "lr_head": 0.001,
+    "weight_decay": 0.05,
+    "head_weight_decay": 0.0001,
+    "supcon_temp": 0.07,
+    "lambda_disease": 1.5,
+    "label_smoothing": 0.1,
+    "proj_hidden": 256,
+    "proj_dim": 128,
+    "drop_rate": 0.0,
+    "num_holdout_pairs": 15,
+    "val_frac": 0.1,
+    "seed": 42
+  }
+}
